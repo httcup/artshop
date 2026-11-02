@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hand-Textured Wall Art | Terra &amp; Tone Studio</title>
+<meta name="description" content="Hand-painted 3D textured abstract oil painting for neutral modern homes. Made to order, free worldwide shipping, duties included.">
+<style>
+  :root{
+    --ink:#2b2620; --muted:#7a7267; --line:#e5dfd6;
+    --cream:#faf7f2; --sand:#f1ebe1; --sage:#8a9a82; --sage-deep:#5f6e58;
+    --accent:#a4552f;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+  img{display:block;width:100%}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+  section{padding:64px 0}
+  .kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage-deep);font-weight:600}
+  h1{font-size:44px;line-height:1.15;font-weight:600;letter-spacing:-.01em}
+  h2{font-size:30px;font-weight:600;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:16px}
+  .btn{display:inline-block;padding:14px 32px;background:var(--ink);color:#fff;text-decoration:none;font-size:14px;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:opacity .2s}
+  .btn:hover{opacity:.85}
+  .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+
+  /* announcement + nav */
+  .announce{background:var(--ink);color:#f5f1ea;text-align:center;font-size:12.5px;letter-spacing:.06em;padding:9px 16px}
+  .announce b{color:#e8c9a8}
+  nav{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-size:19px;font-weight:700;letter-spacing:.14em}
+  .logo span{color:var(--sage-deep)}
+  .nav-links{display:flex;gap:28px;font-size:13.5px;letter-spacing:.05em}
+  .nav-links a{color:var(--ink);text-decoration:none}
+  .nav-links a:hover{color:var(--sage-deep)}
+
+  /* hero */
+  .hero{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden}
+  .hero img.bg{position:absolute;inset:0;height:100%;object-fit:cover}
+  .hero .veil{position:absolute;inset:0;background:rgba(250,247,242,.72)}
+  .hero-in{position:relative;text-align:center;max-width:640px;margin:0 auto;padding:48px 24px}
+  .hero h1{margin:14px 0 12px}
+  .hero .sub{margin-bottom:28px}
+  .trust-row{display:flex;gap:24px;justify-content:center;margin-top:22px;font-size:12.5px;color:var(--muted)}
+
+  /* product grid */
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:36px}
+  .card{text-decoration:none;color:inherit;display:block}
+  .card .ph{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:1}
+  .card .ph img{height:100%;object-fit:cover;transition:transform .5s}
+  .card:hover .ph img{transform:scale(1.04)}
+  .badge{position:absolute;top:10px;left:10px;background:var(--accent);color:#fff;font-size:11px;letter-spacing:.08em;padding:4px 9px;border-radius:2px}
+  .card h3{font-size:15px;font-weight:500;margin:12px 0 4px}
+  .price{font-size:14px}
+  .price s{color:var(--muted);margin-right:8px}
+  .price .now{color:var(--accent);font-weight:600}
+
+  /* series */
+  .series{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:36px}
+  .series a{position:relative;display:block;border-radius:3px;overflow:hidden;aspect-ratio:16/9;text-decoration:none}
+  .series img{height:100%;object-fit:cover}
+  .series .cap{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(20,16,10,.65));color:#fff;padding:36px 24px 20px}
+  .series .cap b{font-size:20px;font-weight:600;display:block}
+  .series .cap i{font-style:normal;font-size:13px;opacity:.9}
+
+  /* spaces */
+  .pills{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:28px}
+  .pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 20px;font-size:13.5px;color:var(--ink);text-decoration:none}
+  .pill:hover{border-color:var(--sage-deep);color:var(--sage-deep)}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:36px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:4px;padding:26px 20px;text-align:center}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--sand);color:var(--sage-deep);font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:14px}
+  .step b{display:block;font-size:15px;margin-bottom:4px}
+  .step p{font-size:13px;color:var(--muted)}
+
+  /* craft */
+  .craft{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+  .craft img{border-radius:4px;aspect-ratio:4/3;object-fit:cover}
+  .craft ul{list-style:none;margin-top:18px}
+  .craft li{padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px}
+  .craft li b{color:var(--sage-deep)}
+
+  /* reviews */
+  .rev-head{text-align:center}
+  .rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:4px;padding:22px}
+  .stars{color:#c98a3d;letter-spacing:2px;font-size:14px}
+  .rev p{font-size:14px;margin:10px 0 14px}
+  .rev .who{font-size:12.5px;color:var(--muted)}
+  .rev img{border-radius:3px;aspect-ratio:1;object-fit:cover;margin-top:6px}
+
+  /* cta band */
+  .band{background:var(--sand);text-align:center}
+
+  /* trust icons */
+  .trust4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center}
+  .trust4 b{display:block;font-size:14.5px;margin-top:8px}
+  .trust4 p{font-size:12.5px;color:var(--muted)}
+  .dot{width:44px;height:44px;border-radius:50%;background:var(--sand);display:flex;align-items:center;justify-content:center;margin:0 auto;font-size:18px}
+
+  footer{background:var(--ink);color:#cfc8bd;padding:48px 0;font-size:13.5px}
+  footer .cols{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px}
+  footer a{color:#e9e2d6;text-decoration:none;display:block;margin:6px 0}
+  .copy{margin-top:36px;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:12px;color:#8f887c}
+
+  @media(max-width:900px){
+    .grid,.steps,.rev-grid,.trust4{grid-template-columns:repeat(2,1fr)}
+    .series,.craft{grid-template-columns:1fr}
+    h1{font-size:32px} h2{font-size:24px}
+    .nav-links{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">FREE WORLDWIDE SHIPPING &nbsp;·&nbsp; <b>ALL DUTIES INCLUDED</b> &nbsp;·&nbsp; LAUNCH: 60% OFF EVERYTHING</div>
+
+<nav><div class="wrap nav-in">
+  <div class="nav-links" style="visibility:hidden" aria-hidden="true"><span>·</span><span>·</span><span>·</span></div>
+  <div class="logo">TERRA <span>&amp;</span> TONE</div>
+  <div class="nav-links">
+    <a href="#best">Best Sellers</a><a href="#series">Collections</a><a href="#craft">Our Craft</a><a href="#reviews">Reviews</a><a href="#trade">Trade</a>
+  </div>
+</div></nav>
+
+<header class="hero">
+  <img class="bg" src="images/hero.png" alt="Textured art in a neutral living room">
+  <div class="veil"></div>
+  <div class="hero-in">
+    <div class="kicker">Hand-Painted · Made to Order</div>
+    <h1>Textured Wall Art for Calm, Modern Homes</h1>
+    <p class="sub">Every piece is painted by hand with palette-knife impasto, made to your size and frame, and shipped duty-paid to your door.</p>
+    <a class="btn" href="#best">Shop Best Sellers</a>
+    <div class="trust-row"><span>✓ Free shipping</span><span>✓ Duties included</span><span>✓ 30-day returns</span><span>✓ Photo approval before dispatch</span></div>
+  </div>
+</header>
+
+<section id="best"><div class="wrap">
+  <p class="kicker">Chosen by homeowners</p>
+  <h2>Best Sellers</h2>
+  <div class="grid">
+    <a class="card" href="#">
+      <div class="ph"><span class="badge">60% OFF</span><img src="images/wave.png" alt="Flowing Wave textured art"></div>
+      <h3>Flowing Wave | 3D Textured Abstract</h3>
+      <div class="price"><s>$769.00</s><span class="now">From $307.60</span></div>
+    </a>
+    <a class="card" href="#">
+      <div class="ph"><span class="badge">60% OFF</span><img src="images/dunes.png" alt="Layered Dunes textured art"></div>
+      <h3>Layered Dunes | Terracotta Impasto</h3>
+      <div class="price"><s>$769.00</s><span class="now">From $307.60</span></div>
+    </a>
+    <a class="card" href="#">
+      <div class="ph"><span class="badge">60% OFF</span><img src="images/earth.png" alt="Earth Currents white impasto art"></div>
+      <h3>Earth Currents | White Wabi-Sabi</h3>
+      <div class="price"><s>$769.00</s><span class="now">From $307.60</span></div>
+    </a>
+    <a class="card" href="#">
+      <div class="ph"><span class="badge">60% OFF</span><img src="images/floral.png" alt="Ivory Petals textured floral art"></div>
+      <h3>Ivory Petals | 3D Textured Floral</h3>
+      <div class="price"><s>$769.00</s><span class="now">From $307.60</span></div>
+    </a>
+  </div>
+</div></section>
+
+<section id="series" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
+  <p class="kicker">Best-selling series</p>
+  <h2>Two Ways to Bring Texture Home</h2>
+  <div class="series">
+    <a href="#"><img src="images/wave.png" alt=""><div class="cap"><b>3D Textured Series</b><i>Sculptural impasto with dimensional detail →</i></div></a>
+    <a href="#"><img src="images/earth.png" alt=""><div class="cap"><b>Wabi-Sabi Series</b><i>Organic, imperfect, quietly elegant →</i></div></a>
+  </div>
+</div></section>
+
+<section><div class="wrap" style="text-align:center">
+  <p class="kicker">Shop by space</p>
+  <h2>Find the Right Piece for Every Room</h2>
+  <div class="pills">
+    <a class="pill" href="#">Living Room</a><a class="pill" href="#">Bedroom</a><a class="pill" href="#">Dining Room</a><a class="pill" href="#">Entryway</a><a class="pill" href="#">Home Office</a><a class="pill" href="#">Reading Nook</a>
+  </div>
+</div></section>
+
+<section style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <p class="kicker">From order to doorway</p>
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><b>Order Placed</b><p>Choose your size and frame option.</p></div>
+    <div class="step"><div class="n">2</div><b>Hand-Painted</b><p>Painted to order in 5–8 business days.</p></div>
+    <div class="step"><div class="n">3</div><b>Your Approval</b><p>We email photos — you confirm before we ship.</p></div>
+    <div class="step"><div class="n">4</div><b>Packed &amp; Shipped</b><p>Insured delivery in 5–8 days, duties paid.</p></div>
+  </div>
+</div></section>
+
+<section id="craft"><div class="wrap craft">
+  <img src="images/dunes.png" alt="Impasto texture close-up">
+  <div>
+    <p class="kicker">Our craft</p>
+    <h2>Texture You Can Almost Touch</h2>
+    <ul>
+      <li><b>100% hand-painted</b> — real oil paint, real palette knives, no prints.</li>
+      <li><b>Made to order</b> — sized and framed for your wall, never warehoused.</li>
+      <li><b>Photo approval</b> — nothing ships until you say it's right.</li>
+      <li><b>Arrives ready</b> — customs and duties covered by us, always.</li>
+    </ul>
+    <p style="margin-top:20px"><a class="btn ghost" href="#best">Explore the Collection</a></p>
+  </div>
+</div></section>
+
+<section id="reviews" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <div class="rev-head">
+    <p class="kicker">Real homes, real stories</p>
+    <h2>Loved by Art Lovers Worldwide</h2>
+    <p class="sub" style="margin-top:8px">★★★★★ 4.9 average from verified buyers</p>
+  </div>
+  <div class="rev-grid">
+    <div class="rev"><div class="stars">★★★★★</div><p>"The texture is stunning in person — photos don't do it justice. The approval photos made the wait feel personal."</p><div class="who">Sarah M. · Austin, TX</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Ordered the dunes piece for our entryway. Shipping was faster than promised and no surprise customs fees."</p><div class="who">Daniel &amp; Priya · Toronto</div></div>
+    <div class="rev"><div class="stars">★★★★★</div><p>"Third piece from this studio. The ivory floral anchors our whole bedroom. Worth every dollar."</p><div class="who">Emily R. · London, UK</div></div>
+  </div>
+</div></section>
+
+<section class="band"><div class="wrap">
+  <p class="kicker">Limited launch pricing</p>
+  <h2>60% Off Ends When the Launch Does</h2>
+  <p class="sub" style="margin:12px 0 24px">Each piece is painted to order — secure yours before the queue fills.</p>
+  <a class="btn" href="#best">Shop the Sale</a>
+</div></section>
+
+<section><div class="wrap trust4">
+  <div><div class="dot">🖌</div><b>Hand-Painted</b><p>Visible brushwork, real texture</p></div>
+  <div><div class="dot">📦</div><b>Made to Order</b><p>For your size and frame</p></div>
+  <div><div class="dot">🛡</div><b>Secure Delivery</b><p>Inspected and carefully packed</p></div>
+  <div><div class="dot">🔒</div><b>Safe Payments</b><p>Card, PayPal, Apple Pay, Shop Pay</p></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div style="max-width:280px"><div class="logo" style="color:#fff">TERRA <span style="color:#a8b89e">&amp;</span> TONE</div><p style="margin-top:10px;font-size:13px">Hand-textured wall art, painted to order and shipped duty-paid to homes worldwide.</p></div>
+    <div><b style="color:#fff">Shop</b><a href="#best">Best Sellers</a><a href="#series">Collections</a><a href="#trade">Trade Program</a></div>
+    <div><b style="color:#fff">Help</b><a href="#">FAQs</a><a href="#">Shipping &amp; Returns</a><a href="#">Contact</a></div>
+    <div id="trade"><b style="color:#fff">Trade</b><a href="#">Designers &amp; Bulk Orders</a><a href="#">Our Story</a><a href="#">Privacy · Terms</a></div>
+  </div>
+  <div class="copy">© 2026 Terra &amp; Tone Studio — prototype for structure demo. USD prices shown.</div>
+</div></footer>
+
+</body>
+</html>
